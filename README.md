@@ -128,9 +128,79 @@ request(url, (error, response, html) => {
 
     // Example of page title extraction
     const title = $('title').text();
-    console.log('Judul halaman:', title);
+    console.log('Page title:', title);
 
     // Example of extracting all links
+    $('a').each((i, el) => {
+      const link = $(el).attr('href');
+      console.log(link);
+    });
+  }
+});
+
+
+# JP
+
+説明
+ 
+このプロジェクトは、さまざまなオンラインソース、特にアニメやビデオに関連するデータに対してWebスクレイピングを実行するためのスクリプトです。このスクリプトを使用すると、さまざまなWebサイトからタイトル、説明、ビデオリンクなどの情報を収集できます。
+ 
+特徴
+ 
+- スクレイピングの自動化: Webページからのデータ取得プロセスを自動化します。
+- 特定のデータ抽出: アニメやビデオに関連する特定のデータを抽出するように設計されています。
+- 人気のあるライブラリの使用:  requests や beautifulsoup4 などのライブラリを使用して、スクレイピングを容易にします。
+- 柔軟性: さまざまな構造を持つさまざまなWebサイトに合わせて調整できます。
+ 
+使用方法
+ 
+1. 依存関係のインストール:必要なすべての依存関係がインストールされていることを確認してください。次のコマンドを使用します。
+bash
+  
+pip install requests beautifulsoup4
+ 
+2. 構成:必要に応じてスクリプトを変更します。ターゲットURL、抽出する要素、データストレージ形式を調整します。
+3. スクリプトの実行:次のコマンドを使用してスクリプトを実行します。
+bash
+  
+node scrape.js
+ 
+4. 結果:正常に抽出されたデータは、指定されたファイルに保存されます。
+ 
+ファイル構造
+ 
+このプロジェクトの重要なファイルの一覧を以下に示します。
+ 
+-  README.md : このファイル（プロジェクトのドキュメント）。
+-  SaaytMp3.js : MP3データをスクレイピングするためのスクリプト。
+-  SaaytMp4V4.js : MP4データをスクレイピングするためのスクリプト。
+-  animeFilter.js : アニメデータをフィルタリングするためのスクリプト。
+-  anoboy.js : Anoboyサイトからデータをスクレイピングするためのスクリプト。
+-  ellz-animeSearch.js : アニメを検索するためのスクリプト。
+-  ellz-ytMp3V2.js : YouTubeからMP3データをスクレイピングするためのスクリプト。
+-  ellz-ytMp3V3.js : YouTubeからMP3データをスクレイピングするためのスクリプト（別のバージョン）。
+-  ellz-ytMp4V2.js : YouTubeからMP4データをスクレイピングするためのスクリプト。
+ 
+コード例（JavaScript）
+ 
+JavaScriptとNode.jsを使用した簡単なスクレイピングスクリプトの例を次に示します。
+ 
+javascript
+  
+const request = require('request');
+const cheerio = require('cheerio');
+
+const url = 'https://example.com';
+
+request(url, (error, response, html) => {
+  if (!error && response.statusCode == 200) {
+    const $ = cheerio.load(html);
+
+    // ページタイトルの抽出例
+    const title = $('title').text();
+    console.log('ページタイトル:', title);
+
+    // すべてのリンクの抽出例
     $('a').each((i, el) => {
       const link = $(el).attr('href');
       console.log(link);
