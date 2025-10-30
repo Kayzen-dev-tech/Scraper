@@ -45,8 +45,7 @@ Berikut adalah daftar file penting dalam proyek ini:
 Contoh Kode (JavaScript)
  
 Berikut adalah contoh sederhana script scraping menggunakan JavaScript dan Node.js:
- 
-  //javascript
+
 const request = require('request');
 const cheerio = require('cheerio');
 
@@ -114,7 +113,6 @@ Code Example (JavaScript)
 
 Here is a simple example of a scraping script using JavaScript and Node.js:
 
-  // javascript
 const cheerio = require('cheerio');
 const url = 'https://example.com';
 
@@ -179,8 +177,7 @@ node scrape.js
 コード例（JavaScript）
  
 JavaScriptとNode.jsを使用した簡単なスクレイピングスクリプトの例を次に示します。
- 
-  // javascript
+
 const request = require('request');
 const cheerio = require('cheerio');
 
