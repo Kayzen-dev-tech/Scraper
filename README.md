@@ -46,8 +46,7 @@ Contoh Kode (JavaScript)
  
 Berikut adalah contoh sederhana script scraping menggunakan JavaScript dan Node.js:
  
-javascript
-  
+  //javascript
 const request = require('request');
 const cheerio = require('cheerio');
 
@@ -67,7 +66,6 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
-});
 
 
 #EN
@@ -116,10 +114,8 @@ Code Example (JavaScript)
 
 Here is a simple example of a scraping script using JavaScript and Node.js:
 
-javascript
-
+  // javascript
 const cheerio = require('cheerio');
-
 const url = 'https://example.com';
 
 request(url, (error, response, html) => {
@@ -136,7 +132,6 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
-});
 
 
 # JP
@@ -154,18 +149,18 @@ request(url, (error, response, html) => {
  
 使用方法
  
-1. 依存関係のインストール:必要なすべての依存関係がインストールされていることを確認してください。次のコマンドを使用します。
+ 1. 依存関係のインストール:必要なすべての依存関係がインストールされていることを確認してください。次のコマンドを使用します。
 bash
   
 pip install requests beautifulsoup4
  
-2. 構成:必要に応じてスクリプトを変更します。ターゲットURL、抽出する要素、データストレージ形式を調整します。
-3. スクリプトの実行:次のコマンドを使用してスクリプトを実行します。
+ 2. 構成:必要に応じてスクリプトを変更します。ターゲットURL、抽出する要素、データストレージ形式を調整します。
+ 3. スクリプトの実行:次のコマンドを使用してスクリプトを実行します。
 bash
   
 node scrape.js
  
-4. 結果:正常に抽出されたデータは、指定されたファイルに保存されます。
+ 4. 結果:正常に抽出されたデータは、指定されたファイルに保存されます。
  
 ファイル構造
  
@@ -185,8 +180,7 @@ node scrape.js
  
 JavaScriptとNode.jsを使用した簡単なスクレイピングスクリプトの例を次に示します。
  
-javascript
-  
+  // javascript
 const request = require('request');
 const cheerio = require('cheerio');
 
@@ -206,4 +200,3 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
-});
