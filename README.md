@@ -46,6 +46,7 @@ Contoh Kode (JavaScript)
  
 Berikut adalah contoh sederhana script scraping menggunakan JavaScript dan Node.js:
 
+```javascript
 const request = require('request');
 const cheerio = require('cheerio');
 
@@ -65,7 +66,7 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
-
+  ```
 
 #EN
 
@@ -113,6 +114,7 @@ Code Example (JavaScript)
 
 Here is a simple example of a scraping script using JavaScript and Node.js:
 
+```javascript
 const cheerio = require('cheerio');
 const url = 'https://example.com';
 
@@ -130,7 +132,7 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
-
+```
 
 # JP
 
@@ -178,6 +180,7 @@ node scrape.js
  
 JavaScriptとNode.jsを使用した簡単なスクレイピングスクリプトの例を次に示します。
 
+```javascript
 const request = require('request');
 const cheerio = require('cheerio');
 
@@ -197,3 +200,4 @@ request(url, (error, response, html) => {
       console.log(link);
     });
   }
+```
